@@ -14,5 +14,9 @@ export class AppComponent {
   a =10;
   b=6;
   Addition = this.a + this.b;
-  inputValue ='hello';
+  inputValue :string='hello';
+  isDisabled :boolean= false;
+  display( msg:string){
+    alert(msg);
+  }
 }

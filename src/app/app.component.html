@@ -12,9 +12,10 @@
 <p> value of Addition:{{Addition}}</p>
 <div>
   <h1> property binding</h1>
-  <input type="text" class="styled-input" value="{{ inputValue}}"/>
+  <input type="text" class="styled-input" value="{{ inputValue}}" [disabled]="isDisabled"/>
   <br/><br/>
-  <input type="text" class="styled-input" [value]="inputValue"/>
 
+  <input type="text" class="styled-input" [value]="inputValue" [disabled]="isDisabled"/>
+  <button type="submit" (click)="display('Welcome to Angular!')">Click me</button>
 </div>
 <app-test></app-test>
