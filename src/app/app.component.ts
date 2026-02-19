@@ -10,5 +10,8 @@ import { TestComponent } from './test/test.component';
 })
 export class AppComponent {
   title = 'welcome';
-  msg ="Hello from AppComponent!"
+  msg ="Hello from AppComponent!";
+  a =10;
+  b=6;
+  Addition = this.a + this.b;
 }
