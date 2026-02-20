@@ -9,14 +9,12 @@ import { TestComponent } from './test/test.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'welcome';
-  msg ="Hello from AppComponent!";
-  a =10;
-  b=6;
-  Addition = this.a + this.b;
-  inputValue :string='hello';
-  isDisabled :boolean= false;
-  display( msg:string){
-    alert(msg);
+  count :number=0;
+  counter(type:string){
+    if(type === 'incr'){
+      this.count++;
+    } else if(type === 'decr'){
+      this.count--;
+    }
   }
 }

@@ -7,15 +7,10 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<p> value of a:{{ a}}</p>
-<p> value of b:{{b}}</p>
-<p> value of Addition:{{Addition}}</p>
-<div>
-  <h1> property binding</h1>
-  <input type="text" class="styled-input" value="{{ inputValue}}" [disabled]="isDisabled"/>
-  <br/><br/>
-
-  <input type="text" class="styled-input" [value]="inputValue" [disabled]="isDisabled"/>
-  <button type="submit" (click)="display('Welcome to Angular!')">Click me</button>
+<div class="container">
+  <h1>counter example</h1>
+  <div class="btn-container"></div>
+  <button (click)="counter('decr')">--</button>
+  <p>{{count}}</p>
+  <button (click)="counter('incr')">++</button>
 </div>
-<app-test></app-test>
