@@ -9,12 +9,9 @@ import { TestComponent } from './test/test.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  count :number=0;
-  counter(type:string){
-    if(type === 'incr'){
-      this.count++;
-    } else if(type === 'decr'){
-      this.count--;
-    }
+  count =0;
+  increment(){
+this.count++;
+  
   }
 }

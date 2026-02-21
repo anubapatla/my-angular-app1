@@ -7,10 +7,4 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<div class="container">
-  <h1>counter example</h1>
-  <div class="btn-container"></div>
-  <button (click)="counter('decr')">--</button>
-  <p>{{count}}</p>
-  <button (click)="counter('incr')">++</button>
-</div>
+<h1 (drag)="increment()">Counter: {{count}}</h1>
