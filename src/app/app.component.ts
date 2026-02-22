@@ -9,9 +9,9 @@ import { TestComponent } from './test/test.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  count =0;
-  increment(){
-this.count++;
-  
+  onKeyUp(){
+    console.log("keyup event triggered");
   }
+  
+  
 }
