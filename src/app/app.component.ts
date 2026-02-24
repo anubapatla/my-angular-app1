@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class AppComponent {
   staticInput :string ="helloworld";
+  dynamicInput:string ='';
   }
   
   
