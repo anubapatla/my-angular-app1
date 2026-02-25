@@ -10,8 +10,11 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  staticInput :string ="helloworld";
+  inputVal :string ='';
   dynamicInput:string ='';
+  show(){
+    this.dynamicInput = this.inputVal;
+  }
   }
   
   
