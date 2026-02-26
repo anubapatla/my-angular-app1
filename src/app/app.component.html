@@ -7,7 +7,13 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<input type="text" [(ngModel)]="inputVal"/>
-<br/>
-<button type="submit" (click)="show()">Show</button>
-<h1>{{dynamicInput}}</h1>
+<div class ="container">
+  <div class="form-group">
+    <label> Quantity:</label>
+    <input type="number" class="quantity-input" [(ngModel)]="quantity" />
+  </div>
+  <div class="price-info">
+    <p>price per item:<span class="price">{{pricePerItem}}</span></p>
+    <p>Total Price: <span class="total-price">{{totalPrice}}</span></p>
+  </div>
+</div>
