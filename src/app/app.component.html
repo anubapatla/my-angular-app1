@@ -7,6 +7,7 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<h1 *ngIf="num > 0"> {{ num}} number is greater than 10</h1>
-<h1 *ngIf="num < 0"> {{ num}} number is less than 10</h1>
-<h1 *ngIf="num == 0"> {{ num}} number is equal to 10</h1>
+<button (click)="show()">Show</button>
+<div *ngIf="displayElement">
+  <p>hello welcome to angular dirctive</p>
+</div>

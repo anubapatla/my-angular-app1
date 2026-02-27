@@ -12,8 +12,11 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  num : number = 20;
+  displayElement : boolean = false;
+  show(){
+    this.displayElement=!this.displayElement;
   }
+}
   
   
 
