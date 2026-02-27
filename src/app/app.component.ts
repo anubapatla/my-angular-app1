@@ -12,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  display: boolean = true;
+  num : number = 20;
   }
   
   
