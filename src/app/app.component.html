@@ -6,8 +6,34 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div>
+  <button (click)="toggleEmployee()">Display Employees</button>
+  @if(showEmployees){
 
-<button (click)="show()">Show</button>
-<div *ngIf="displayElement">
-  <p>hello welcome to angular dirctive</p>
+<div>
+  <h1> List of Employees</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Role</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for(emp of employees();track emp.id;){
+        <tr>
+          <td>{{emp.id}}</td>
+          <td>{{emp.name}}</td>
+          <td>{{emp.role}}</td>
+        </tr>
+      } @empty{
+        <h2>No employees to display</h2>
+       }
+    </tbody>
+  </table>
+</div>
+  }@else {
+    <h2>No employees to display</h2>
+  }
 </div>
