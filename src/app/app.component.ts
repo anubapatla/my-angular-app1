@@ -14,14 +14,25 @@ interface empInterface {
   selector: 'app-root',
   imports: [RouterOutlet, TestComponent, CommonModule],
   template: `
-    <div *ngFor="let item of items; index as i">
-      <p>{{i}} {{item}}</p>
+    <div *ngFor="let item of items; trackBy:trackByItemsId">
+      <p>{{item.id}}: {{item.name}}</p>
     </div>
+    <button (click)="updateItems()">
   `,
+  
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  items: string[] = ['Angular', 'React', 'Node.js'];
+  items= [
+    {id:1, name:'Apple'},
+    {id:2, name:'Banana'},
+    {id:3, name:'Cherry'},
+  ];
+  trackByItemsId(items:any){
+    return items.id;  }
+    updateItems(){
+      this.items[1] ={id:2,name:'Mango'}
+    }
 }
   
   
