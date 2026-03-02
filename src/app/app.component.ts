@@ -17,18 +17,20 @@ interface empInterface {
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  showEmployees: boolean =true;
-  employees = signal<empInterface[]>([
-    {id:1,name:'EmploeeA',role:'Admin'},
-    {id:2,name:'EmploeeB',role:'Manager'},
-    {id:3,name:'EmploeeC',role:'Developer'},
-    {id:4,name:'EmploeeD',role:'Tester'},
-    {id:5,name:'EmploeeE',role:'Designer'}
-  ]);
-  toggleEmployee(){
-    this.showEmployees = !this.showEmployees;
-
-  }
+  fullStackDev =[
+  {
+    id:1,
+    name: 'Angular',
+  },
+  {
+    id:2,
+    name: 'react',
+  },
+  {
+    id:3,
+    name: 'dotnet',
+  },
+]
 }
   
   
