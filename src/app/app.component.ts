@@ -12,25 +12,16 @@ interface empInterface {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TestComponent,CommonModule],
-  templateUrl: './app.component.html',
+  imports: [RouterOutlet, TestComponent, CommonModule],
+  template: `
+    <div *ngFor="let item of items; index as i">
+      <p>{{i}} {{item}}</p>
+    </div>
+  `,
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  fullStackDev =[
-  {
-    id:1,
-    name: 'Angular',
-  },
-  {
-    id:2,
-    name: 'react',
-  },
-  {
-    id:3,
-    name: 'dotnet',
-  },
-]
+  items: string[] = ['Angular', 'React', 'Node.js'];
 }
   
   
