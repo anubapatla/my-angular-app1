@@ -6,3 +6,9 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<div [ngSwitch]="person.age" style="text-align:center;font-size:20px;">
+  <p *ngSwitchCase="10">the person is 10 years old</p>
+   <p *ngSwitchCase="20">the person is 20 years old</p>
+    <p *ngSwitchCase="30">the person is 30 years old</p>
+     <p *ngSwitchDefault>the person is {{person.age}} years old</p>
+</div>

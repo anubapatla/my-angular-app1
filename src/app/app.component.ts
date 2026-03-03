@@ -12,27 +12,12 @@ interface empInterface {
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, TestComponent, CommonModule],
-  template: `
-    <div *ngFor="let item of items; trackBy:trackByItemsId">
-      <p>{{item.id}}: {{item.name}}</p>
-    </div>
-    <button (click)="updateItems()">
-  `,
-  
+  imports: [RouterOutlet, TestComponent,CommonModule],
+  templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  items= [
-    {id:1, name:'Apple'},
-    {id:2, name:'Banana'},
-    {id:3, name:'Cherry'},
-  ];
-  trackByItemsId(items:any){
-    return items.id;  }
-    updateItems(){
-      this.items[1] ={id:2,name:'Mango'}
-    }
+  person: any = { age: 90 };
 }
   
   
