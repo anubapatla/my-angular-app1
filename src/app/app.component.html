@@ -6,40 +6,12 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<div>
-  <h2>Role Selection</h2>
-  <select [(ngModel)]="employeeRole">
-    <option value="">Select a role</option>
-    <option value="Developer">Developer</option>
-    <option value="Marketing">Marketing</option>
-    <option value="Manager">Manager</option>
-    <option value="Hr">Hr</option>
-    <option value="Analyst">Analyst</option>
-    <option value="Admin">Admin</option>
-  </select>
-  @switch(employeeRole){
-    @case('Admin'){
-      <h1>list of employees</h1>
-      <h3>Selected Role: Admin</h3>
-      <table>
-        <thead>
-          <tr>
-            <td>ID</td>
-            <td>Name</td>
-            <td>Role</td>
-          </tr>
-        </thead>
-        <tbody>
-          @for(emp of employeeList(); track $index){
-            @if(emp.role === "Admin"){
-              <tr>
-            <td>{{emp.id}}</td>
-            <td>{{emp.name}}</td>
-            <td>{{emp.role}}</td>
-          </tr>}}
-        </tbody>
-      </table>
-    }
-  }
-  
+<div class="container">
+  <label> Enter your age:</label>
+  <input type="text" (input)="checkEligibility()" [(ngModel)]="age"/>
+  <div [ngSwitch]="isEligible">
+    <p *ngSwitchCase="true">You are eligible to vote.</p>
+    <p *ngSwitchCase="false">You are not eligible to vote.</p>
+    
+  </div>
 </div>
