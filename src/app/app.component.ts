@@ -13,12 +13,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-age:number =0;
-isEligible:boolean =false;
-
-checkEligibility(){
-  this.isEligible=this.age >=18;
-}
+updateStyles:any='updateSryles';
 }
   
   

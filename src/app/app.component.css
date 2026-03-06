@@ -1,9 +1,16 @@
-.container {
-    width:400px;
-    padding: 20px;
-    margin:20px auto;;
-}
-h1{
+.updateStyles{
     text-align:center;
-    font-size: 35px;
+    background-color: green;
+    color:bisque;
+    font-size:21px;
+    padding:10px 20px;
+    margin:0 auto;
+    border-radius: 5px;
+    width:700px;
+}
+.italicText{
+    font-style:italc;
+}
+.letterformat{
+    text-transform: uppercase;
 }
