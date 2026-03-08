@@ -13,18 +13,16 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  colorMode:string='lightMode';
-  toggleMode(){
-    if(this.colorMode==='lightMode'){
-    this.colorMode = 'darkMode ';
-   }
-   else
-    {
-      this.colorMode = 'lightMode';
-    }
-
-
+  title(title: any) {
+    throw new Error('Method not implemented.');
   }
+ applyVal = {
+    'color':'green',
+    'font-style':'italic',
+    'font-size':'35px',
+    'font-weight':'bold',
+  }
+ 
 }
   
   

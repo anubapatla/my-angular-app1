@@ -6,12 +6,9 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<button (click)="toggleMode()">Toggle Mode</button>
-<div class="box" [ngClass]="colorMode">
-  <h1>Light Mode</h1>
-  <p>lorem ipsum dolor sit amet</p>
-</div>
-<div class="box" [ngClass]="colorMode">
-  <h1>Dark Mode</h1>
-  <p>lorem ipsum dolor sit amet</p>
+<div style="text-align: center">
+  <h1 >Welcome to Your Angular App</h1>
+
+  
+  <p [ngStyle]="applyVal">This is a simple placeholder for your project.</p>
 </div>
