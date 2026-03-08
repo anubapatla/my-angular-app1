@@ -6,4 +6,12 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<p [ngClass]="'updateStyles italicText letterformat'">this is example of ngclass directive</p>
+<button (click)="toggleMode()">Toggle Mode</button>
+<div class="box" [ngClass]="colorMode">
+  <h1>Light Mode</h1>
+  <p>lorem ipsum dolor sit amet</p>
+</div>
+<div class="box" [ngClass]="colorMode">
+  <h1>Dark Mode</h1>
+  <p>lorem ipsum dolor sit amet</p>
+</div>

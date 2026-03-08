@@ -13,7 +13,18 @@ import { CommonModule } from '@angular/common';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-updateStyles:any='updateSryles';
+  colorMode:string='lightMode';
+  toggleMode(){
+    if(this.colorMode==='lightMode'){
+    this.colorMode = 'darkMode ';
+   }
+   else
+    {
+      this.colorMode = 'lightMode';
+    }
+
+
+  }
 }
   
   
