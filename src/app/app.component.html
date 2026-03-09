@@ -6,9 +6,20 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<div style="text-align: center">
-  <h1 >Welcome to Your Angular App</h1>
+<form>
+  <h1>submit form</h1>
+  <div class="form-group">
+    <label for="name"> Name</label>
+    <input type="text" id="name" [(ngModel)]="nm" [ngStyle]="
+    { 'background-color':nm ? 'lightgreen' :'pink'}" required/>
 
+  </div>
+  <div class="form-group">
+    <label for="email"> Email</label>
+    <input type="email" id="email" [(ngModel)]="em" required>
+
+  </div>
+  <button type="submit">submit</button>
   
-  <p [ngStyle]="applyVal">This is a simple placeholder for your project.</p>
-</div>
+
+</form>

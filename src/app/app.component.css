@@ -1,16 +1,45 @@
-.updateStyles{
-    text-align:center;
-    background-color: green;
-    color:bisque;
-    font-size:21px;
-    padding:10px 20px;
+form{
+    width:280px;
     margin:0 auto;
-    border-radius: 5px;
-    width:700px;
+    background-colour:yellow;
+    padding:20px 50px 40px;
+    box-shadow:1px 4px 10x 1px;
+    margin-top:25px;
+    font-family:"segoe UI",sans-serif;
 }
-.italicText{
-    font-style:italc;
+h1
+{
+    text-align:center;
+    margin-bottom:20px;
+
 }
-.letterformat{
-    text-transform: uppercase;
+.form-group {
+    margin-bottom:20px;
+}
+label{
+    display:block;
+    margin-bottom:5px;
+}
+iput{
+    width:100%;
+    padding:10px;
+    border:none;
+    bordr-radius:5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    font-size:16px;
+}
+button{
+    width:100%;
+    padding:10px;
+    border:none;
+    border-radius:5px;
+    background-colour:blue;
+    color:white;
+    font-size:16px;
+    box-shadow:1px 4px 8px 1px rgb(40,45,50);
+    cursor:pointer;
+}
+button:hover{
+    background-colour:yellow;
+    transition:0.3s ease-in-out;
 }
