@@ -6,20 +6,10 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<form>
-  <h1>submit form</h1>
-  <div class="form-group">
-    <label for="name"> Name</label>
-    <input type="text" id="name" [(ngModel)]="nm" [ngStyle]="
-    { 'background-color':nm ? 'lightgreen' :'pink'}" required/>
-
+<div *ngFor="let subject of subjectlist">
+  <div> 
+    <span style="margin: 10px;">subjectname:{{ subject.name }}</span>
+    <span style="font-size: 20px">subjectcode: {{ subject.subCode }}</span>
   </div>
-  <div class="form-group">
-    <label for="email"> Email</label>
-    <input type="email" id="email" [(ngModel)]="em" required>
 
-  </div>
-  <button type="submit">submit</button>
-  
-
-</form>
+</div>

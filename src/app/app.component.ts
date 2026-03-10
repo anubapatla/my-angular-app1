@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-
+  standalone: true,
   imports: [RouterOutlet, TestComponent, CommonModule, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -16,7 +16,24 @@ export class AppComponent {
   title(title: any) {
     throw new Error('Method not implemented.');
   }
- nm:string ='';
- em:string ='';
-}
+  subjectlist =[
+    {
+      subCode:101,
+      name:'javascript',
+    },
+      {
+         subCode:102,
+         name:'python'
+      },
+      {
+      subCode:103,
+      name:'c#',
+    },
+     {
+      subCode:104,
+      name:'Angular',
+    },
+    
+  ];
 
+}
