@@ -16,5 +16,5 @@ export class AppComponent {
   title(title: any) {
     throw new Error('Method not implemented.');
   }
-  isAuthorized:boolean =false;
+  listItems: string[]=['Item1','Item2','Item3'];
 }

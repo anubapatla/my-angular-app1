@@ -6,9 +6,11 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<ng-container  *ngIf="isAuthorized; else notAuthorized">
-  <h1>Authorized USER</h1>
+<ng-container *ngIf="listItems.length>0;else noItems">
+  <ul>
+    <li *ngFor="let item of listItems">{{ item }}</li>
+  </ul>
 </ng-container>
-<ng-template #notAuthorized>
-  <h1>NOT AUTHORIZED</h1>
+<ng-template  #noItems>
+  <p>no items to display</p>
 </ng-template>
