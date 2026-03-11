@@ -6,10 +6,9 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<div *ngFor="let subject of subjectlist">
-  <div> 
-    <span style="margin: 10px;">subjectname:{{ subject.name }}</span>
-    <span style="font-size: 20px">subjectcode: {{ subject.subCode }}</span>
-  </div>
-
-</div>
+<ng-container  *ngIf="isAuthorized; else notAuthorized">
+  <h1>Authorized USER</h1>
+</ng-container>
+<ng-template #notAuthorized>
+  <h1>NOT AUTHORIZED</h1>
+</ng-template>

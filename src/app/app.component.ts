@@ -16,24 +16,5 @@ export class AppComponent {
   title(title: any) {
     throw new Error('Method not implemented.');
   }
-  subjectlist =[
-    {
-      subCode:101,
-      name:'javascript',
-    },
-      {
-         subCode:102,
-         name:'python'
-      },
-      {
-      subCode:103,
-      name:'c#',
-    },
-     {
-      subCode:104,
-      name:'Angular',
-    },
-    
-  ];
-
+  isAuthorized:boolean =false;
 }
