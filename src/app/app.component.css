@@ -1,45 +1,43 @@
-form{
-    width:280px;
-    margin:0 auto;
-    background-colour:yellow;
-    padding:20px 50px 40px;
-    box-shadow:1px 4px 10x 1px;
-    margin-top:25px;
-    font-family:"segoe UI",sans-serif;
+*{
+    font-family: Arial,Helvetica,sans-serif;
 }
-h1
-{
-    text-align:center;
-    margin-bottom:20px;
+.box{
+    background-color:skyblue;
+    padding:35px;
+    height:100px;
+    width:300px;
+    position:fixed;
+    left:51%;
+    top:39%;
+    tranform:translate(-50%,-50%);
+}
+.input-container{
+    position:relative;
+}
+.input-container label{
+    position:absoilute;
+    top:0px;
+    left:0px;
+    font-size:16px;
+    color:pink;
+    transition:all .5s ease-in-out;;
+}
+.input-container input {
+    border:0;
+    border-bottom:1px solid red;
+    background:tranparen;
+    width:100%;
+    padding:8px 0 5px 0;
+    font-size:16px;
+    color:brown;
+}
+.input-container input:focus{
+    border:none;
+    outline:none;
+    border-bottom:1px solid green;
 
 }
-.form-group {
-    margin-bottom:20px;
-}
-label{
-    display:block;
-    margin-bottom:5px;
-}
-iput{
-    width:100%;
-    padding:10px;
-    border:none;
-    bordr-radius:5px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    font-size:16px;
-}
-button{
-    width:100%;
-    padding:10px;
-    border:none;
-    border-radius:5px;
-    background-colour:blue;
-    color:white;
-    font-size:16px;
-    box-shadow:1px 4px 8px 1px rgb(40,45,50);
-    cursor:pointer;
-}
-button:hover{
-    background-colour:yellow;
-    transition:0.3s ease-in-out;
+.input-container input:focus~label{
+    top:-12px;
+    front-size:12px;
 }

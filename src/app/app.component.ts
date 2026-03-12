@@ -16,5 +16,5 @@ export class AppComponent {
   title(title: any) {
     throw new Error('Method not implemented.');
   }
-  listItems: string[]=['Item1','Item2','Item3'];
+ user:string='';
 }
