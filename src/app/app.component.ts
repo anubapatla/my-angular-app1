@@ -14,7 +14,9 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent {
   title(title: any) {
-    throw new Error('Method not implemented.');
+    throw new Error('Method not implemented.');}
+    employees=[
+      {id:1, name:'userA',age:3, salary:50000},
+      {id:2, name:'userb',age:3, salary:50000}
+    ]
   }
- user:string='';
-}
