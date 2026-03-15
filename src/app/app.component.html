@@ -6,21 +6,65 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<ng-template #employeeTable let-emp>
-  <table border="1" style="text-align:center;font-size: 20px;">
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Salary</th>
-    </tr>
-    <tr *ngFor="let e of emp">
-      <td>{{e.id}}</td>
-      <td>{{e.name}}</td>
-      <td>{{e.salary}}</td>
-    </tr>
-  </table>
-</ng-template>
-
-<ng-container *ngTemplateOutlet="employeeTable;context:{ $implicit:employees}">
-
+<h1>portfolio</h1>
+<ng-container>
+  <h2>personal information</h2>
+  <form>
+    <div>
+      <label for="name">name</label>
+      <input type="text" id="name" name="name"/>
+    </div>
+    <div>
+      <label for="email">email</label>
+      <input type="text" id="email" name="email"/>
+    </div>
+    <div>
+      <label for="phone">phone</label>
+      <input type="text" id="phone" name="phone"/>
+    </div>
+    <div>
+      <label for="address">address</label>
+      <input type="text" id="address" name="address"/>
+    </div>
+  </form>
+  <h2>qualifications</h2>
+  <div>
+    <form>
+      <div>
+        <label for="degree">degree</label>
+        <input type="text" id="degree" name="degree"/>
+      </div>
+      <div>
+        <label for="college">college</label>
+        <input type="text" id="college" name="college"/>
+      </div>
+      <div>
+        <label for="year">year of graduation</label>
+        <input type="text" id="year" name="year"/>
+      </div>
+    </form>
+  </div>
+  <div class="btn-container">
+    <button>Add qualifications</button>
+    <button type="submit">submit</button>
+  </div>
 </ng-container>
+<ng-template>
+  <div class="preview-container">
+    <h2>preview</h2>
+    <div>
+      <p></p>
+      <p>Email: </p>
+      <p>phone: </p>
+      <p>address: </p>
+    </div>
+    <div>
+      <h3>Qualifications</h3>
+      <div>
+        <h5>school/college</h5>
+        <h5>degree</h5>
+      </div>
+  </div>
+  <button>Edit</button>
+  </div>
+</ng-template>
