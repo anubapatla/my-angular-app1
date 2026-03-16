@@ -7,64 +7,68 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <h1>portfolio</h1>
-<ng-container>
+<ng-container *ngIf="!submitted; else preview">
   <h2>personal information</h2>
+
   <form>
     <div>
       <label for="name">name</label>
-      <input type="text" id="name" name="name"/>
+      <input type="text" id="name" name="name" [(ngModel)]="nm"/>
     </div>
     <div>
       <label for="email">email</label>
-      <input type="text" id="email" name="email"/>
+      <input type="text" id="email" name="email" [(ngModel)]="em"/>
     </div>
     <div>
       <label for="phone">phone</label>
-      <input type="text" id="phone" name="phone"/>
+      <input type="text" id="phone" name="phone" [(ngModel)]="ph"/>
     </div>
     <div>
       <label for="address">address</label>
-      <input type="text" id="address" name="address"/>
+      <input type="text" id="address" name="address" [(ngModel)]="add"/>
     </div>
   </form>
   <h2>qualifications</h2>
-  <div>
+  <div *ngFor="let q of qualifications; let i=index">
+    <h3> Qualification{{i+1}}</h3>
     <form>
       <div>
         <label for="degree">degree</label>
-        <input type="text" id="degree" name="degree"/>
+        <input type="text" id="degree" name="degree" [(ngModel)]="q.degree"/>
       </div>
       <div>
-        <label for="college">college</label>
-        <input type="text" id="college" name="college"/>
+        <label for="school">school</label>
+        <input type="text" id="school" name="school" [(ngModel)]="q.school"/>
       </div>
       <div>
         <label for="year">year of graduation</label>
-        <input type="text" id="year" name="year"/>
+        <input type="text" id="year" name="year" [(ngModel)]="q.year"/>
       </div>
     </form>
   </div>
   <div class="btn-container">
-    <button>Add qualifications</button>
-    <button type="submit">submit</button>
+    <button (click)=" addQualification()">Add qualifications</button>
+    <button type="submit" (click)="formSubmit()">submit</button>
   </div>
 </ng-container>
-<ng-template>
+<ng-template #preview>
   <div class="preview-container">
     <h2>preview</h2>
     <div>
-      <p></p>
-      <p>Email: </p>
-      <p>phone: </p>
-      <p>address: </p>
+      <p>{{nm}}</p>
+      <p>Email: {{em}}</p>
+      <p>phone: {{ph}}</p>
+      <p>address: {{add}}</p>
     </div>
-    <div>
+    <div *ngFor="let q of qualifications">
       <h3>Qualifications</h3>
       <div>
-        <h5>school/college</h5>
-        <h5>degree</h5>
+        <h5>school/college: {{q.school}}</h5>
+        <h5>degree: {{q.degree}}</h5>
+        <h5>year of graduation: {{q.year}}</h5>
       </div>
-  </div>
-  <button>Edit</button>
+    </div>
+  
+  <button  class="btn-edit" (click)="formEdit()">Edit</button>
   </div>
 </ng-template>

@@ -15,5 +15,19 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   title(title: any) {
     throw new Error('Method not implemented.');}
-   
+   nm='';
+   em='';
+   ph='';
+   add='';
+   submitted:boolean=false;
+   qualifications =[{school:'',degree:'',year:''}]
+   addQualification(){this.qualifications.push({ school:'',degree:'',year:''})
+
+   }
+   formSubmit(){
+    this.submitted=true;
+   }
+   formEdit(){
+    this.submitted=false;
+   }
   }
