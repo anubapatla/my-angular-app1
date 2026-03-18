@@ -12,10 +12,11 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title(title: any) {
     throw new Error('Method not implemented.');}
-    ngOnInit(): void {
-      console.log('calling from ngonit() hook...')
-    }
+    inputValue:string='Intial Value';
+   // constructor(){
+    //  console.log('calling from constructor -',this.inputValue);
+   // }
   }
