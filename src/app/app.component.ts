@@ -16,6 +16,9 @@ export class AppComponent {
   title(title: any) {
     throw new Error('Method not implemented.');}
     inputValue:string='Intial Value';
+    updatevalue(){
+      this.inputValue="App component"
+    }
    // constructor(){
     //  console.log('calling from constructor -',this.inputValue);
    // }
