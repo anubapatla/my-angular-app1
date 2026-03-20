@@ -15,11 +15,10 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   title(title: any) {
     throw new Error('Method not implemented.');}
-    inputValue:string='Intial Value';
-    updatevalue(){
-      this.inputValue="App component"
+    ngOnInit():void{
+      console.log('ngOnInit:component has been intialized');
     }
-   // constructor(){
-    //  console.log('calling from constructor -',this.inputValue);
-   // }
+    constructor(){
+      console.log('constructor:component being constructed');
+    }
   }
