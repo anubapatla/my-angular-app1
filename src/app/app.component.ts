@@ -15,10 +15,22 @@ import { CommonModule } from '@angular/common';
 export class AppComponent {
   title(title: any) {
     throw new Error('Method not implemented.');}
-    ngOnInit():void{
-      console.log('ngOnInit:component has been intialized');
+    count:number =0;
+    conterInterval:any;
+    startCounter(){
+      this.conterInterval=setInterval(()=>{
+        if(this.count <= 5){
+         console.log(this.count++);
+        }else {
+        clearInterval(this.conterInterval);
+        }
+      },1000);
+    }
+    ngOnInit(): void{
+      this.startCounter();
     }
     constructor(){
-      console.log('constructor:component being constructed');
+
     }
   }
+  
