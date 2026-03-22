@@ -8,12 +8,7 @@ import { JsonPipe } from '@angular/common';
   styleUrl: './test.component.css'
 })
 export class TestComponent  implements DoCheck{
-  @Input() user:any;
-  private previousUserName:string | undefined;
   ngDoCheck(): void {
-    if(this.user.name !=this.previousUserName){
-    this.previousUserName=this.user.name;
-    
-   console.log('ngDoCheck called-user name changed to:',this.user.name);
- }
-}}
+    console.log('ngDoCheck() hook was invoked')
+  }
+}

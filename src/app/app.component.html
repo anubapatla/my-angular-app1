@@ -8,6 +8,11 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <h1> component updation hook</h1>
 <div>
-    <app-test [user]="user"></app-test>
-    <button (click)=" changeUserName()">change user name </button>
+    <h2> parent component</h2>
+    <button (click)="sendDataToChild()"> Generate number</button>
+    <app-test>
+        <h3>
+            {{ dataFromParent}}
+        </h3>
+    </app-test>
 </div>
