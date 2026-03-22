@@ -1,4 +1,4 @@
-import { Component,DoCheck,Input,OnChanges, SimpleChanges } from '@angular/core';
+import { AfterContentInit, Component,ContentChild,DoCheck,ElementRef,Input,OnChanges, SimpleChanges, ViewChild, viewChild } from '@angular/core';
 import { JsonPipe } from '@angular/common';
 
 @Component({
@@ -7,8 +7,12 @@ import { JsonPipe } from '@angular/common';
   templateUrl: './test.component.html',
   styleUrl: './test.component.css'
 })
-export class TestComponent  implements DoCheck{
-  ngDoCheck(): void {
-    console.log('ngDoCheck() hook was invoked')
+export class TestComponent  implements AfterContentInit{
+  @ViewChild('wrapper')wrapper!:ElementRef;
+  @ContentChild('contentWrapper')content!:ElementRef;
+  ngAfterContentInit(): void {
+    console.log('ngAfterContentInit() hook was invoked..');
+     console.log('ngAfterContentInit()-wrapper:',this.wrapper);
+      console.log('ngAfterContentInit() - content:' ,this.content);
   }
 }
