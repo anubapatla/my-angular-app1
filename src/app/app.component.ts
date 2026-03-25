@@ -12,19 +12,15 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements DoCheck {
+export class AppComponent  {
   title(title: any) {
     throw new Error('Method not implemented.');}
- dataFromParent:string='';
- //ngAfterContentInit():void{
-  //console.log('ngAfterContentInit() hook was invoked');
- //}
- ngDoCheck(): void {
-   console.log('ngDoCheck() hook was invoked');
+ displayComponent :boolean =true;
+ toggle():void {
+  this.displayComponent =!this.displayComponent;
  }
- sendDataToChild(): void{
-  let random = Math.floor(Math.random()*10);
-  this.dataFromParent='Random numbers'+random;
+ ngOnInit():void{
+  console.log('App component:OnInit');
  }
   }
   

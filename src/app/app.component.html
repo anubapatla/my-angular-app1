@@ -6,18 +6,10 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<h1> component updation hook</h1>
 <div>
-    <h2> parent component</h2>
-    <button (click)="sendDataToChild()"> Generate number</button>
-    <app-test>
-        <h3>
-            {{ dataFromParent}}
-        </h3>
-        <div #contentWrapper>
-            London is the capital city of England.
-
-             London has over 9 million inhabitants.
-        </div>
-    </app-test>
+    <h1> App Component</h1>
+    <button (click)="toggle()">show/delete</button>
+    @if(displayComponent){
+        <app-test> </app-test>
+    }
 </div>
