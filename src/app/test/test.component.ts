@@ -1,4 +1,4 @@
-import { AfterContentChecked, AfterContentInit, AfterViewInit, Component,ContentChild,DoCheck,ElementRef,Input,OnChanges, SimpleChanges, ViewChild, viewChild } from '@angular/core';
+import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component,ContentChild,DoCheck,ElementRef,Input,OnChanges, SimpleChanges, ViewChild, viewChild } from '@angular/core';
 import { JsonPipe } from '@angular/common';
 
 @Component({
@@ -7,7 +7,7 @@ import { JsonPipe } from '@angular/common';
   templateUrl: './test.component.html',
   styleUrl: './test.component.css'
 })
-export class TestComponent  implements AfterContentInit , AfterContentChecked,AfterViewInit{
+export class TestComponent  implements AfterContentInit , AfterContentChecked,AfterViewChecked{
   @ViewChild('wrapper')wrapper!:ElementRef;
   @ContentChild('contentWrapper')content!:ElementRef;
   ngAfterContentInit(): void {
@@ -18,11 +18,14 @@ export class TestComponent  implements AfterContentInit , AfterContentChecked,Af
   ngAfterContentChecked(): void {
     console.log('ngAfterContentChecked() hook is')
   }
-  ngAfterViewInit(): void {
-    const divElement:HTMLElement=this.wrapper.nativeElement;
-    divElement.style.color='maroon';
-    divElement.style.fontSize='15px';
-    divElement.style.fontWeight='300';
-    console.log('ngAfterViewInit() was invoked..',this.wrapper)
+  ngAfterViewChecked(): void {
+    console.log('ngAfterviewchecked() hook was invoked...')
   }
-}
+  //ngAfterViewInit(): void {
+    //const divElement:HTMLElement=this.wrapper.nativeElement;
+    //divElement.style.color='maroon';
+    //divElement.style.fontSize='15px';
+    //divElement.style.fontWeight='300';
+    //console.log('ngAfterViewInit() was invoked..',this.wrapper)
+  }
+
