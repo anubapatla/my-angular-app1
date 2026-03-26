@@ -7,9 +7,8 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <div>
-    <h1> App Component</h1>
-    <button (click)="toggle()">show/delete</button>
-    @if(displayComponent){
-        <app-test> </app-test>
-    }
+    <h1> parentComponent</h1>
+    <app-test [receiveMessage]="displayMessage"></app-test>
+    
+    
 </div>
