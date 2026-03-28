@@ -14,7 +14,13 @@ import { CommonModule } from '@angular/common';
 })
 export class AppComponent  {
   title(title: any) {
-    throw new Error('Method not implemented.');}
-  displayMessage:string='message from parent'
+    throw new Error('Method not implemented.');
   }
+  courses: {id: number; name: string}[] = [
+    {id: 1, name: 'java-springboot interview questions'},
+    {id: 1, name: '.net-aspnet interview questions'},
+    {id: 1, name: 'html-web interview questions'},
+    {id: 1, name: 'angular-angular interview questions'},
+  ];
+}
   

@@ -6,9 +6,15 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<div>
-    <h1> parentComponent</h1>
-    <app-test [receiveMessage]="displayMessage"></app-test>
+<div class="container">
+    <div class="parent">
+        <h2> data in app componnet</h2>
+        <pre> {{ courses | json}}</pre>
+    </div>
+     <div class="child">
+        <h2> child component</h2>
+        <app-test [showData]="courses"></app-test>
+     </div>
     
     
 </div>
