@@ -6,15 +6,10 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<div class="container">
-    <div class="parent">
-        <h2> data in app componnet</h2>
-        <pre> {{ courses | json}}</pre>
-    </div>
-     <div class="child">
-        <h2> child component</h2>
-        <app-test [showData]="courses"></app-test>
-     </div>
-    
-    
-</div>
+<app-test (myEvent)="receiveChildEvent($event)"></app-test>
+  <div>
+    <h2>
+        parent component
+    </h2>
+    <p> {{ message}}</p>
+  </div>  
