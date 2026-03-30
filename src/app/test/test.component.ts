@@ -7,16 +7,9 @@ import { CommonModule, JsonPipe } from '@angular/common';
   templateUrl: './test.component.html',
   styleUrl: './test.component.css'
 })
-export class TestComponent implements OnInit,OnDestroy {
-  @Input() items: string[]=[]; 
-  @Output() itemDeleted= new EventEmitter<number>();
-  deleteIndex(index:number){
-    this.itemDeleted.emit(index);
-  }
-  ngOnInit(): void {
-    console.log('TestComponent initilized');
-  }
-  ngOnDestroy(): void {
-    console.log('TestComponent destroyed');
-  }
+export class TestComponent  {
+count:number = 0;
+incrCounter(){
+  this.count++;
+}
 }
