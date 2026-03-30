@@ -12,13 +12,21 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent  {
+export class AppComponent  implements OnInit{
   title(title: any) {
     throw new Error('Method not implemented.');
   }
-  message:string='';
-  receiveChildEvent(eventData:string){
-    this.message=eventData;
-  }
+  itemArr : string[]=['Item1','Item2','Item3'];
+  addItem(){
+    const newItem = `Item ${this.itemArr.length+1}`;
+    this.itemArr.push(newItem);  }
+    deleteItem(index: number){
+      if(index>=0 && index <this.itemArr.length){
+        this.itemArr.splice(index,1);
+      }
+    }
+    ngOnInit():void{
+      console.log('app component intiakised');
+    }
 }
   
