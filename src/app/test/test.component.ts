@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, output, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, Output, EventEmitter, output, OnInit, OnDestroy, ContentChild, ElementRef, AfterContentInit } from '@angular/core';
 import { CommonModule, JsonPipe } from '@angular/common';
 
 @Component({
@@ -7,9 +7,12 @@ import { CommonModule, JsonPipe } from '@angular/common';
   templateUrl: './test.component.html',
   styleUrl: './test.component.css'
 })
-export class TestComponent  {
-count:number = 0;
-incrCounter(){
-  this.count++;
+export class TestComponent implements AfterContentInit {
+ @ContentChild('showPara')paraRef?: ElementRef;
+  ngAfterContentInit(): void {
+  const content = this.paraRef?.nativeElement;
+  content.style.fontStyle='italic';
+  content.style.color='blue';
 }
+
 }

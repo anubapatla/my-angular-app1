@@ -17,18 +17,7 @@ export class AppComponent {
     throw new Error('Method not implemented.');
   }
 
-  @ViewChild(TestComponent)
-  testComponent?: TestComponent;
-  @ViewChild('btnIncr') btnRef?: ElementRef<HTMLButtonElement>;
-  incrChildCounter(){
-    console.log(this.testComponent);
-      this.testComponent?.incrCounter();
-    }
-    ngAfterViewInit() : void {
-      if(this.btnRef?.nativeElement){
-        this.btnRef.nativeElement.innerHTML='counter++';
-      }
-    }
+ 
   }
 
   
