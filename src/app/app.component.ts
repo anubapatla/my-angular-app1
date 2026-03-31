@@ -1,4 +1,4 @@
-import { AfterContentInit, Component, DoCheck, Input, OnInit, signal, ViewChild } from '@angular/core';
+import { AfterContentInit, Component, DoCheck, ElementRef, Input, OnInit, signal, ViewChild } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TestComponent } from './test/test.component';
 import { FormsModule } from '@angular/forms';
@@ -19,11 +19,16 @@ export class AppComponent {
 
   @ViewChild(TestComponent)
   testComponent?: TestComponent;
+  @ViewChild('btnIncr') btnRef?: ElementRef<HTMLButtonElement>;
   incrChildCounter(){
     console.log(this.testComponent);
-    if(this.testComponent){
-      this.testComponent.incrCounter();
+      this.testComponent?.incrCounter();
+    }
+    ngAfterViewInit() : void {
+      if(this.btnRef?.nativeElement){
+        this.btnRef.nativeElement.innerHTML='counter++';
+      }
     }
   }
-}
+
   
