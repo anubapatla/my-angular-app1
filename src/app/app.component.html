@@ -6,10 +6,14 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<div appHighlightElement><h2>App Component</h2>
-    
-        <p >This is a series of animated short stories to help children learn English with their parents. Each story
-        has a downloadable transcript and an activities pack to help children explore and use the language.</p>
-    
+<div>
+    <label for="colorPicker">Choose a color:</label>
+    <input type="color" id="colorPicker" #colorInput/>
 </div>
+<div class="color-box" [style.backgroundColor]="selectedColor">
+    <h1>
+        App component
+    </h1>
+    <p>This is the main application component.</p>
 
+</div>
