@@ -26,6 +26,7 @@ export class HighlightElementDirective implements OnInit{
   ngOnInit(): void {
     this.bgcolor = 'lightblue';
     this.color = 'darkblue';
+    this.padding='20px'
   }
 
 }
