@@ -6,7 +6,17 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<h1 style="text-align:center">{{ text }}</h1>
-<h1 style="text-align:center">{{ text1|lowercase }}</h1>
-<h1 style="text-align:center">{{ text2|uppercase }}</h1>
-<h2 style="text-align:center">{{ showDt|date:'yyyy-MM-dd' }}</h2>
+<div class="table-container">
+    <table>
+        <tr>
+        <th>Name</th>
+        <th>State</th>
+        <th>Salary</th>
+        </tr>
+        <tr *ngFor="let item of employees">
+        <td>{{item.name}}</td>
+        <td>{{item.state}}</td>
+        <td>{{item.salary}}</td>
+        </tr>
+    </table>
+</div>

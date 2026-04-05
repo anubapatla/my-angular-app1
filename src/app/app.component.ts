@@ -14,11 +14,12 @@ import { HighlightElementDirective } from "./highlight-element.directive";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-text:string ='example of content projection'; 
-text1:string ='example of content projection'; 
-text2:string ='example of content projection'; 
-showDt:Date =new Date();
-
+employees=[
+  {name:'userA',state:'canada',salary:20000},
+  {name:'userB',state:'america',salary:10000},
+  {name:'userC',state:'india',salary:40000},
+  {name:'userD',state:'austin',salary:50000}
+];
   title(title: any) {
     throw new Error('Method not implemented.');
   }
