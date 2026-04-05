@@ -6,14 +6,7 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<div>
-    <label for="colorPicker">Choose a color:</label>
-    <input type="color" id="colorPicker" #colorInput/>
-</div>
-<div class="color-box" [style.backgroundColor]="selectedColor">
-    <h1>
-        App component
-    </h1>
-    <p>This is the main application component.</p>
-
-</div>
+<h1 style="text-align:center">{{ text }}</h1>
+<h1 style="text-align:center">{{ text1|lowercase }}</h1>
+<h1 style="text-align:center">{{ text2|uppercase }}</h1>
+<h2 style="text-align:center">{{ showDt|date:'yyyy-MM-dd' }}</h2>

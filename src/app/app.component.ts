@@ -9,22 +9,16 @@ import { HighlightElementDirective } from "./highlight-element.directive";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HighlightElementDirective, CommonModule, FormsModule, HighlightElementDirective],
+  imports: [RouterOutlet, CommonModule, FormsModule, HighlightElementDirective],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements AfterViewInit{
-  ngAfterViewInit(): void {
-    this.selectedColor=this.colorInput.nativeElement.value;
-  }
-  @ViewChild('colorInput') colorInput!: ElementRef;
-  @HostBinding('style.backgroundColor')selectedColor!:string;
-  @HostListener('input', ['$event']) onColorChange(event: Event){
-    const target = event.target as HTMLInputElement;
-    if (target) {
-      this.selectedColor = target.value;
-    }
-  }
+export class AppComponent {
+text:string ='example of content projection'; 
+text1:string ='example of content projection'; 
+text2:string ='example of content projection'; 
+showDt:Date =new Date();
+
   title(title: any) {
     throw new Error('Method not implemented.');
   }
