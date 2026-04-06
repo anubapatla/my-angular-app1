@@ -14,13 +14,9 @@ import { HighlightElementDirective } from "./highlight-element.directive";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-employees=[
-  {name:'userA',state:'canada',salary:20000},
-  {name:'userB',state:'america',salary:10000},
-  {name:'userC',state:'india',salary:40000},
-  {name:'userD',state:'austin',salary:50000}
-];
-  title(title: any) {
+ sliceArr =['ItemA','ItemB','ItemC','ItemD','ItemE'];
+  
+ title(title: any) {
     throw new Error('Method not implemented.');
   }
 }
