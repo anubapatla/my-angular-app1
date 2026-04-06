@@ -6,17 +6,6 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<div class="table-container">
-    <table>
-        <tr>
-        <th>Name</th>
-        <th>State</th>
-        <th>Salary</th>
-        </tr>
-        <tr *ngFor="let item of employees">
-        <td>{{item.name}}</td>
-        <td>{{item.state}}</td>
-        <td>{{item.salary}}</td>
-        </tr>
-    </table>
-</div>
+<p>{{ "angular slice pipe"|slice:0:7}}</p>
+<p>{{ "angular slice pipe"|slice:0:14}}</p>
+<p>{{ "angular slice pipe"|slice:-11}}</p>
