@@ -14,7 +14,11 @@ import { HighlightElementDirective } from "./highlight-element.directive";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-
+weightInPounds: number =0;
+weightInKilograms:number=0;
+convertWeight(){
+  this.weightInKilograms = this.weightInPounds * 0.453592;
+}
 
   
  title(title: any) {
