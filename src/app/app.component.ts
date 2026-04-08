@@ -10,20 +10,35 @@ import { HighlightElementDirective } from "./highlight-element.directive";
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, CommonModule, FormsModule, HighlightElementDirective],
-  templateUrl: './app.component.html',
+  template: `
+  <h1>user information </h1>
+  <div class="user-info">
+  <div class="info-block">
+  <h4>without Json </h4>
+  <p>{{ userDetails }}</p>
+  </div>
+  <div class="info-block">
+  <h4>with json</h4>
+  <pre>{{ userDetails | json | uppercase}}</pre>
+  </div>
+  </div>`,
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-weightInPounds: number =0;
-weightInKilograms:number=0;
-convertWeight(){
-  this.weightInKilograms = this.weightInPounds * 0.453592;
-}
-
-  
- title(title: any) {
+userDetails = {
+  name:'User',
+  email:'user@example.com',
+  address:{
+    street:'123 Main St',
+    city:'Anytown',
+    state:'CA',
+    zip:'12345'
+  },
+};
+title(title: any) {
     throw new Error('Method not implemented.');
   }
 }
+
 
   
