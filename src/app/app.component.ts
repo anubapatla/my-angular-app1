@@ -14,26 +14,8 @@ import { HighlightElementDirective } from "./highlight-element.directive";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
- products:{name: string; imageUrl:string}[]=[{
- name:'mastering bun-the modern full stack developer',
- imageUrl:'assets/bun.jpg',
- },{
- name:'mastering nestjs',
- imageUrl:'assets/NestJs.jpg',
- },
- {
- name:'mastering bangular developer',
- imageUrl:'assets/angular.jpg',
- },
- {
- name:'javascriptdeveloper',
- imageUrl:'src\assets/js_Course.jpg',
- },
- {
- name:'mastering css with sass&bootstrap',
- imageUrl:'assets/Html-Css.jpg',
- },
-];
+
+
   
  title(title: any) {
     throw new Error('Method not implemented.');
