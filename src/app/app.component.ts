@@ -10,31 +10,20 @@ import { HighlightElementDirective } from "./highlight-element.directive";
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, CommonModule, FormsModule, HighlightElementDirective],
-  template: `
-  <h1>user information </h1>
-  <div class="user-info">
-  <div class="info-block">
-  <h4>without Json </h4>
-  <p>{{ userDetails }}</p>
-  </div>
-  <div class="info-block">
-  <h4>with json</h4>
-  <pre>{{ userDetails | json | uppercase}}</pre>
-  </div>
-  </div>`,
+  templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-userDetails = {
-  name:'User',
-  email:'user@example.com',
-  address:{
-    street:'123 Main St',
-    city:'Anytown',
-    state:'CA',
-    zip:'12345'
-  },
-};
+  showJson:boolean=false;
+students =[
+  {name:'userA',age:20,gender:'male',major:'css'},
+   {name:'user',age:22,gender:'female',major:'angular'},
+    {name:'userC',age:25,gender:'female',major:'javascript'},
+     {name:'userD',age:24,gender:'male',major:'c#'},
+];
+toggleJson(){
+ this.showJson=!this.showJson;
+}
 title(title: any) {
     throw new Error('Method not implemented.');
   }

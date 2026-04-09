@@ -6,3 +6,29 @@
 <!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<h1>Student LIst</h1>
+<table border="1" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Gender</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Major</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for(student of students;track students){
+            <tr>
+                <td>{{student.gender}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.age}}</td>
+                <td>{{student.major}}</td>
+            </tr>
+        }
+    </tbody>
+</table>
+<button type="button" (click)="toggleJson()">JSON Format</button>
+<div *ngIf="showJson">
+    <h2>Json format</h2>
+    <pre>{{ students | json |titlecase }}</pre>
+</div>
