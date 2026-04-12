@@ -15,7 +15,12 @@ import { AppendTextPipe } from './append-text.pipe';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
- 
+  numbers: number[] = [5, 2, 9, 1,  6];
+  sortOrder: 'asc' | 'desc' ='asc';
+  showList:boolean=false;
+ showSorting(){
+  this.showList=true;
+ }
 title(title: any) {
     throw new Error('Method not implemented.');
   }
