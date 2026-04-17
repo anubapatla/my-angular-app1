@@ -3,13 +3,49 @@ body{
     margin:0;
     padding: 0;
     width:100%;}
+    body{
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: 300;
+    }
     header{
         width:100%;
     }
     nav{
-        display:flex;
+        box-sizing: border-box;
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        line-height: 60px;
+        min-height: 8vh;
+        align-items:center;
+        background-color: burlywood;
+    }
+    nav ul {
+        margin :0;
+        color:yellow;
         justify-content: space-around;
         background-color: black;
         color:white;
-        padding: 10px;
+        padding-right: 40px;
+        top:0;
+        left:0;
+        line-height:60px;
+        position: fixed;
+        list-style: none;
+        overflow: hidden;
+      
+    }
+    nav a{
+        text-decoration: none;
+        color:seagreen;
+        font-size: 16px;
+          transition: color 0.3s ease-in-out;
+    }
+    nav a:hover{
+        color:pink;
+
+    }
+    nav a:focus{
+        color:orange;
     }
