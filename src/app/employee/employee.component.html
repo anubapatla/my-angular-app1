@@ -1,13 +1,1 @@
 <p>employee works!</p>
-<table>
-    <thead> </thead>
-        <tbody>
-            @for(emp of employees; track $index){
-                <tr>
-                    <td><a href="#" [routerLink]="['/employee', emp.empname , emp.id]">{{emp.empDept}}</a></td>
-                    
-                </tr>
-            }
-        </tbody>
-   
-</table>

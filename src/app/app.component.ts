@@ -1,5 +1,5 @@
 import { AfterContentInit, AfterViewInit, Component, DoCheck, ElementRef, HostBinding, HostListener, Input, OnInit, signal, ViewChild } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterLinkWithHref } from '@angular/router';
 
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -10,7 +10,7 @@ import { AppendTextPipe } from './append-text.pipe';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule, FormsModule, AppendTextPipe],
+  imports: [RouterOutlet, CommonModule, FormsModule, AppendTextPipe, RouterLinkWithHref],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
