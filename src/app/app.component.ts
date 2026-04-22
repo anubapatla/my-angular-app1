@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HighlightElementDirective } from "./highlight-element.directive";
 import { AppendTextPipe } from './append-text.pipe';
+import { EmployeeService } from './dependencies/employee.service';
 
 
 @Component({
@@ -15,12 +16,17 @@ import { AppendTextPipe } from './append-text.pipe';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  numbers: number[] = [5, 2, 9, 1,  6];
-  sortOrder: 'asc' | 'desc' ='asc';
-  showList:boolean=false;
- showSorting(){
-  this.showList=true;
- }
+  employees: any[];
+  empId:number=0;
+  emp:any;
+
+  constructor(private e:EmployeeService){
+    this.employees = this.e.getEmployees();
+  }
+  showDetails(employeeId:number){
+    this.empId=employeeId;
+    this.emp=this.e.getEmployeeById(employeeId);
+  }
 title(title: any) {
     throw new Error('Method not implemented.');
   }
