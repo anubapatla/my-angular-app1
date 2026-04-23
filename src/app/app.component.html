@@ -7,19 +7,7 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-<h1>Employee Directory</h1>
-<ul>
-    @for (emp of employees; track $index){
-        <li>employee: {{emp.name}}</li>
-        <button (click)="showDetails(emp.id)">Show Details</button>
-        <div>
-            @if(emp.id=== empId){
-                <p>Id: {{emp.id}}</p>
-                <p>Department: {{emp.department}}</p>
-                <p>Location: {{emp.location}}</p>
-                <p>Phone: {{emp.phone}}</p>
-            }
-        </div>
-    }
-</ul>
-<app-product></app-product>
+<h1>Lazy loading components</h1>
+<button routerLink="/first">Go to First Component</button>
+<button routerLink="/second">Go to Second Component</button>
+<router-outlet></router-outlet>
