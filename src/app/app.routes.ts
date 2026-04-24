@@ -9,7 +9,7 @@ export const routes: Routes = [
   },
   {
     path:'second',
-    //component:SecondComponent,
-    loadComponent:()=>import('./second/second.component').then(m=>m.SecondComponent)
+    component:SecondComponent,
+    //loadComponent:()=>import('./second/second.component').then(m=>m.SecondComponent)
   },
 ];
