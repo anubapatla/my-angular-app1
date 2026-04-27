@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HighlightElementDirective } from "./highlight-element.directive";
 import { AppendTextPipe } from './append-text.pipe';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -15,8 +16,14 @@ import { AppendTextPipe } from './append-text.pipe';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  constructor(){
+    const observable = new Observable((subscriber) => {
+      subscriber.next('Hello, Observable!');
+      subscriber.complete();
+    });
+    //console.log("observable executed");
   
-
+  }
 title(title: any) {
     throw new Error('Method not implemented.');
   }
