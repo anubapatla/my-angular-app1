@@ -16,18 +16,22 @@ import { Observable } from 'rxjs';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  constructor(){
-    const observable = new Observable((subscriber) => {
-      subscriber.next('Hello, Observable!');
-      subscriber.complete();
+
+    observable = new Observable((observer) => {
+      observer.next('Hello');
+    
+    }).subscribe({
+      next(value){
+        console.log('Received value:', value);
+      },
     });
     //console.log("observable executed");
   
-  }
+  
 title(title: any) {
     throw new Error('Method not implemented.');
   }
-}
 
+}
 
   
